@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <title>week1 ex1</title>
+   <link rel="stylesheet" type="text/css" href="week1_exercise_GaHee.css">
+
+
+
+
+<style>
+        #topMenu {          
+                height: 50px; 
+                width: 829px;
+        }
+        #topMenu ul li {                       
+                list-style: none;         
+                color: white;               
+                background-color: #2d2d2d; 
+                float: right;             
+                line-height: 50px;          
+                vertical-align: bottom;    
+                text-align: center;         
+        }
+        #topMenu .menuLink {                          
+                text-decoration:none;                    
+                color: white;                             
+                display: block;                            
+                width: 150px;                              
+                font-size: 13px;                          
+                font-weight: bold;                        
+                font-family: "Trebuchet MS", Dotum, Arial; 
+        }
+        #topMenu .menuLink:hover {        
+                color: red;                   
+                background-color: #4d4d4d;  
+        }
+</style>
+
+
+
+
+</head>
+
+<body>
+<header>
+<div class="container">
+ <div class="header"><a href="#"><img src="image/hs.png" alt="html_css" name="logo" width="280" height="180" id="Insert_logo" style="display:block;" /></a> 
+
+
+<nav id="topMenu">
+   
+   <ul>
+
+      <li><a class="menuLink" href="http://learn.shayhowe.com/html-css/getting-to-know-html">Introduction</a> </li>
+      <li><a class="menuLink" href="week1_exercise_GaHee4.html">Element</a> </li>
+      <li><a class="menuLink"href="week1_exercise_GaHee3.html"> Document relationships</a></li> 
+      <li><a class="menuLink"href="week1_exercise_GaHee2.html">Path information</a> </li>
+
+                                                                                           </ul>
+
+
+</nav>
+
+
+
+
+
+
+</header>
+
+<aside>
+   <ul type="disc">
+         <a href="#id"><li>Introduction to links and anchors</li></a>
+       <ul type="none">
+            <li>1.1 Visiting a linked resource</li>
+            <li>1.2 Other link relationships</li>
+            <li>1.3 Specifying anchors and links </li>
+            <li>1.4 Link titles </li>
+            <li>1.5 Internationalization and links </li></ul></ul>
+                                                                                
+
+        
+        <ul type="disc">    
+          <li> The A element</li>
+             <ul type="none">
+             <li> 2.1 Syntax of anchor names </li>
+             <li>2.2 Nested links are illegal </li>
+             <li>2.3 Anchors with the id attribute </li>
+             <li>2.4 Unavailable and unidentifiable resources </li></ul></ul>
+                                                                                                   
+   
+         <ul type="disc">    
+           <li> Document relationships: the LINK element</li>
+             <ul type="none">
+              <li>3.1 Forward and reverse links</li>
+              <li>3.2 Links and external style sheets</li>
+              <li>3.3 Links and search engines</li></ul></ul>
+                                                                                       
+       
+
+
+       <ul type="disc">
+          <li> Path information: the BASE element</li>
+              <ul type="none">
+              <li>4.1 Resolving relative URIs</li></ul></ul>
+   
+
+
+</aside>
+
+
+<section class="ss1">
+   <p>
+<h1 id="id">1 Introduction to links and anchors<br></h1>
+
+
+<strong>1.1 Visiting a linked resource</strong><br>
+<p></p>The default behavior associated with a link is the retrieval of another Web resource. This behavior is commonly and implicitly obtained by selecting the link (e.g., by clicking, through keyboard input, etc.).
+
+The following HTML excerpt contains two links, one whose destination anchor is an HTML document named "chapter2.html" and the other whose destination anchor is a GIF image in the file "forest.gif":
+
+By activating these links (by clicking with the mouse, through keyboard input, voice commands, etc.), users may visit these resources. Note that the href attribute in each source anchor specifies the address of the destination anchor with a URI.
+
+The destination anchor of a link may be an element within an HTML document. The destination anchor must be given an anchor name and any URI addressing this anchor must include the name as its fragment identifier.
+
+Destination anchors in HTML documents may be specified either by the A element (naming it with the name attribute), or by any other element (naming with the id attribute).
+
+Thus, for example, an author might create a table of contents whose entries link to header elements H2, H3, etc., in the same document. Using the A element to create destination anchors, we would write:</p>
+
+<br>
+
+<strong>1.2 Other link relationships</strong><br>
+
+<p>By far the most common use of a link is to retrieve another Web resource, as illustrated in the previous examples. However, authors may insert links in their documents that express other relationships between resources than simply "activate this link to visit that related resource". Links that express other types of relationships have one or more link types specified in their source anchor.
+The roles of a link defined by A or LINK are specified via the rel and rev attributes.
+For instance, links defined by the LINK element may describe the position of a document within a series of documents. In the following excerpt, links within the document entitled "Chapter 5" point to the previous and next chapters:
+
+
+The link type of the first link is "prev" and that of the second is "next" (two of several recognized link types). Links specified by LINK are not rendered with the document's contents, although user agents may render them in other ways (e.g., as navigation tools).
+Even if they are not used for navigation, these links may be interpreted in interesting ways. For example, a user agent that prints a series of HTML documents as a single document may use this link information as the basis of forming a coherent linear document. Further information is given below on using links for the benefit of search engines.</p>
+
+<br>                                           
+
+<strong>1.3 Specifying anchors and links</strong><br>
+
+<p>Although several HTML elements and attributes create links to other resources (e.g., the IMG element, the FORM element, etc.), this chapter discusses links and anchors created by the LINK and A elements. The LINK element may only appear in the head of a document. The A element may only appear in the body.
+
+When the A element's href attribute is set, the element defines a source anchor for a link that may be activated by the user to retrieve a Web resource. The source anchor is the location of the A instance and the destination anchor is the Web resource.
+
+The retrieved resource may be handled by the user agent in several ways: by opening a new HTML document in the same user agent window, opening a new HTML document in a different window, starting a new program to handle the resource, etc. Since the A element has content (text, images, etc.), user agents may render this content in such a way as to indicate the presence of a link (e.g., by underlining the content).
+
+When the name or id attributes of the A element are set, the element defines an anchor that may be the destination of other links.
+
+Authors may set the name and href attributes simultaneously in the same A instance.
+
+The LINK element defines a relationship between the current document and another resource. Although LINK has no content, the relationships it defines may be rendered by some user agents.</p>
+
+<br>
+
+
+<strong>1.4 Link titles</strong><br>
+
+
+<p>The title attribute may be set for both A and LINK to add information about the nature of a link. This information may be spoken by a user agent, rendered as a tool tip, cause a change in cursor image, etc.
+
+Thus, we may augment a previous example by supplying a title for each link:</p>
+
+<br>
+<strong>1.5 Internationalization and links</strong><br>
+
+<p>Since links may point to documents encoded with different character encodings, the A and LINK elements support the charset attribute. This attribute allows authors to advise user agents about the encoding of data at the other end of the link.
+
+The hreflang attribute provides user agents with information about the language of a resource at the end of a link, just as the lang attribute provides information about the language of an element's content or attribute values.
+
+Armed with this additional knowledge, user agents should be able to avoid presenting "garbage" to the user. Instead, they may either locate resources necessary for the correct presentation of the document or, if they cannot locate the resources, they should at least warn the user that the document will be unreadable and explain the cause.</p>
+</section>>
+
+
+
+
+
+
+
+
+
+
+<div class="footer">
+    <p>HTML offers many of the conventional publishing idioms for rich text and structured documents, but what separates it from most other markup languages is its features for hypertext and interactive documents. This section introduces the link (or hyperlink, or Web link), the basic hypertext construct. A link is a connection from one Web resource to another. Although a simple concept, the link has been one of the primary forces driving the success of the Web.
+A link has two ends -- called anchors -- and a direction. The link starts at the "source" anchor and points to the "destination" anchor, which may be any Web resource (e.g., an image, a video clip, a sound bite, a program, an HTML document, an element within an HTML document, etc.). </p>
+    <!-- end .footer --></div>
+  <!-- end .container --></div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+
+
+
+
+
+</html>
+
+
+
+
+

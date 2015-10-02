@@ -1,0 +1,64 @@
+header
+     {
+    	background-color: #BF3228;		
+     }
+
+
+#topMenu
+      {
+	margin-left: 813.5px;
+      }
+
+
+ aside{
+   	border:8px solid black;
+   	position:absolute;
+   	top:270px;
+   	left:10px;
+   	width:500px;
+   	background-color:#22B699;
+    	color: white;
+    	font-weight: bold;
+    	font-size: 31px;
+    }
+
+
+  section{
+   	border:8px solid black;
+   	position:absolute;
+   	top:270px;
+   	left:645px;
+   	width:990px;
+   	background-color:#F6A822;
+   	font-size: 17px;
+  	color: white;
+        
+   }
+
+
+  .footer
+  	{
+  	  font-size: 15px;	
+  	  background-color:#BF3228;	
+  	  color:gray;
+  	  margin-top: 1600px;
+  	}
+
+
+  body
+   	{
+   		background-color:#D4BFBE;
+   	}	
+
+   .p2
+  	 {
+  	    font-size: 13px;	
+  	    list-style-position: inside;
+  	    	}	
+ .footer1
+ 	{
+ 	  font-size: 15px;	
+  	  background-color:#BF3228;	
+  	  color:#3A2D2C;
+  	  margin-top: 1100px;	
+ 	} 	    	

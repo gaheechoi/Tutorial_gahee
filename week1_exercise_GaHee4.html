@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <title>week1 ex1</title>
+   <link rel="stylesheet" type="text/css" href="week1_exercise_GaHee.css">
+
+
+
+
+<style>
+        #topMenu {          
+                height: 50px; 
+                width: 829px;
+        }
+        #topMenu ul li {                       
+                list-style: none;         
+                color: white;               
+                background-color: #2d2d2d; 
+                float: right;             
+                line-height: 50px;          
+                vertical-align: bottom;    
+                text-align: center;         
+        }
+        #topMenu .menuLink {                          
+                text-decoration:none;                    
+                color: white;                             
+                display: block;                            
+                width: 150px;                              
+                font-size: 13px;                          
+                font-weight: bold;                        
+                font-family: "Trebuchet MS", Dotum, Arial; 
+        }
+        #topMenu .menuLink:hover {        
+                color: red;                   
+                background-color: #4d4d4d;  
+        }
+</style>
+
+
+
+
+</head>
+
+<body>
+<header>
+<div class="container">
+ <div class="header"><a href="week1_exercise_GaHee.html"><img src="image/hs.png" alt="html_css" name="logo" width="280" height="180" id="Insert_logo" style="display:block;" /></a> 
+
+
+<nav id="topMenu">
+   
+   <ul>
+
+      <li><a class="menuLink" href="http://learn.shayhowe.com/html-css/getting-to-know-html">Introduction</a> </li>
+      <li><a class="menuLink" href="week1_exercise_GaHee4.html">Element</a> </li>
+      <li><a class="menuLink"href="week1_exercise_GaHee3.html">Document relationships</a></li> 
+      <li><a class="menuLink"href="week1_exercise_GaHee2.html">Path information</a> </li>
+
+                                                                                           </ul>
+
+
+</nav></header>
+                          
+
+
+
+
+
+
+
+
+
+<aside>
+
+<h3>4 Path information: the BASE element</h3>
+
+
+<dl class="p2" >Start tag: required, End tag: forbidden
+
+<dt>Attribute definitions</dt></dl>
+<p class="p2">
+<ins>href = uri [CT]</ins>
+<br>
+By far the most common use of a link is to retrieve another Web resource, as illustrated in the previous examples. However, authors may insert links in their documents that express other relationships between resources than simply "activate this link to visit that related resource". Links that express other types of relationships have one or more link types specified in their source anchor.
+<br><br>The roles of a link defined by A or LINK are specified via the rel and rev attributes.
+For instance, links defined by the LINK element may describe the position of a document within a series of documents. In the following excerpt, links within the document entitled "Chapter 5" point to the previous and next chapters:
+target (target frame information)
+<br><br>In HTML, links and references to external images, applets, form-processing programs, style sheets, etc. are always specified by a URI. Relative URIs are resolved according to a base URI, which may come from a variety of sources. The BASE element allows authors to specify a document's base URI explicitly.
+<br><br>
+By far the most common use of a link is to retrieve another Web resource, as illustrated in the previous examples. However, authors may insert links in their documents that express other relationships between resources than simply "activate this link to visit that related resource". Links that express other types of relationships have one or more link types specified in their source anchor.<br><br>
+The roles of a link defined by A or LINK are specified via the rel and rev attributes.
+For instance, links defined by the LINK element may describe the position of a document within a series of documents. In the following excerpt, links within the document entitled "Chapter 5" point to the previous and next chapters:
+When present, the BASE element must appear in the HEAD section of an HTML document, before any element that refers to an external source. The path information specified by the BASE element only affects URIs in the document where the element appears.
+<br><br>
+For example, given the following BASE declaration and A declaration:
+
+the relative URI "../cages/birds.gif" would resolve to:<br>
+
+http://www.aviary.com/cages/birds.gif
+											</p>
+
+
+
+
+</aside>
+
+
+
+<section>
+<h1>4.1 Resolving relative URIs</h1>
+
+<p>User agents must calculate the base URI for resolving relative URIs according to [RFC1808], section 3. The following describes how [RFC1808] applies specifically to HTML.
+<br><br>
+User agents must calculate the base URI according to the following precedences (highest priority to lowest):
+<br><br>
+By far the most common use of a link is to retrieve another Web resource, as illustrated in the previous examples. However, authors may insert links in their documents that express other relationships between resources than simply "activate this link to visit that related resource". Links that express other types of relationships have one or more link types specified in their source anchor.<br><br>
+The roles of a link defined by A or LINK are specified via the rel and rev attributes.
+For instance, links defined by the LINK element may describe the position of a document within a series of documents. In the following excerpt, links within the document entitled "Chapter 5" point to the previous and next chapters:
+<br><br>
+
+By far the most common use of a link is to retrieve another Web resource, as illustrated in the previous examples. However, authors may insert links in their documents that express other relationships between resources than simply "activate this link to visit that related resource". Links that express other types of relationships have one or more link types specified in their source anchor.<br><br>
+The roles of a link defined by A or LINK are specified via the rel and rev attributes.
+For instance, links defined by the LINK element may describe the position of a document within a series of documents. In the following excerpt, links within the document entitled "Chapter 5" point to the previous and next chapters:<br><br>
+
+The base URI is set by the BASE element.
+The base URI is given by meta data discovered during a protocol interaction, such as an HTTP header (see [RFC2616]).
+By default, the base URI is that of the current document. Not all HTML documents have a base URI (e.g., a valid HTML document may appear in an email and may not be designated by a URI). Such HTML documents are considered erroneous if they contain relative URIs and rely on a default base URI.<br><br>
+Additionally, the OBJECT and APPLET elements define attributes that take precedence over the value set by the BASE element. Please consult the definitions of these elements for more information about URI issues specific to them.
+The base URI is set by the BASE element.
+The base URI is given by meta data discovered during a protocol interaction, such as an HTTP header (see [RFC2616]).<br>
+</p>
+
+
+</section>>
+
+
+
+
+
+<div class="footer1">
+    <p>HTML offers many of the conventional publishing idioms for rich text and structured documents, but what separates it from most other markup languages is its features for hypertext and interactive documents. This section introduces the link (or hyperlink, or Web link), the basic hypertext construct. A link is a connection from one Web resource to another. Although a simple concept, the link has been one of the primary forces driving the success of the Web.
+A link has two ends -- called anchors -- and a direction. The link starts at the "source" anchor and points to the "destination" anchor, which may be any Web resource (e.g., an image, a video clip, a sound bite, a program, an HTML document, an element within an HTML document, etc.). </p>
+    <!-- end .footer --></div>
+  <!-- end .container --></div>
+
+
+
+
+
+
+
+
+</body>
+
+
+
+
+
+
+
+
+</html>

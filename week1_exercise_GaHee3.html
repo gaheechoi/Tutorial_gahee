@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <title>week1 ex1</title>
+   <link rel="stylesheet" type="text/css" href="week1_exercise_GaHee.css">
+
+
+
+
+<style>
+        #topMenu {          
+                height: 50px; 
+                width: 829px;
+        }
+        #topMenu ul li {                       
+                list-style: none;         
+                color: white;               
+                background-color: #2d2d2d; 
+                float: right;             
+                line-height: 50px;          
+                vertical-align: bottom;    
+                text-align: center;         
+        }
+        #topMenu .menuLink {                          
+                text-decoration:none;                    
+                color: white;                             
+                display: block;                            
+                width: 150px;                              
+                font-size: 13px;                          
+                font-weight: bold;                        
+                font-family: "Trebuchet MS", Dotum, Arial; 
+        }
+        #topMenu .menuLink:hover {        
+                color: red;                   
+                background-color: #4d4d4d;  
+        }
+</style>
+
+
+
+
+</head>
+
+<body>
+<header>
+<div class="container">
+ <div class="header"><a href="week1_exercise_GaHee.html"><img src="image/hs.png" alt="html_css" name="logo" width="280" height="180" id="Insert_logo" style="display:block;" /></a> 
+
+
+<nav id="topMenu">
+   
+   <ul>
+
+      <li><a class="menuLink" href="http://learn.shayhowe.com/html-css/getting-to-know-html">Introduction</a> </li>
+      <li><a class="menuLink" href="week1_exercise_GaHee4.html">Element</a> </li>
+      <li><a class="menuLink"href="week1_exercise_GaHee3.html">Document relationships</a></li> 
+      <li><a class="menuLink"href="week1_exercise_GaHee2.html">Path information</a> </li>
+
+                                                                                           </ul>
+
+
+</nav></header>
+                          
+
+
+  
+<aside>
+  <h3>3. Document relationships: the LINK element</h3>
+
+<dl class="p2" >Start tag: required, End tag: required
+
+     <dt>Attribute definitions</dt></dl>
+<br>
+
+
+<p class="p2">id, class (document-wide identifiers)
+lang (language information), dir (text direction)
+title (element title)
+style (inline style information )
+onclick, ondblclick, onmousedown, onmouseup, onmouseover, onmousemove, onmouseout, onkeypress, onkeydown, onkeyup (intrinsic events )
+href, hreflang, type, rel, rev (links and anchors)
+target (target frame information)
+media (header style information)
+charset(character encodings)
+This element defines a link. Unlike A, it may only appear in the HEAD section of a document, although it may appear any number of times. Although LINK has no content, it conveys relationship information that may be rendered by user agents in a variety of ways (e.g., a tool-bar with a drop-down menu of links).
+
+This example illustrates how several LINK definitions may appear in the HEAD section of a document. The current document is "Chapter2.html". The rel attribute specifies the relationship of the linked document with the current document. The values "Index", "Next", and "Prev" are explained in the section on link types.
+
+...the rest of the document...
+
+For more information about W3C, please consult the 
+
+Since links may point to documents encoded with different character encodings, the A and LINK elements support the charset attribute. This attribute allows authors to advise user agents about the encoding of data at the other end of the link. The hreflang attribute provides user agents with information about the language of a resource at the end of a link, just as the lang attribute provides information about the language of an element's content or attribute values. Armed with this additional knowledge, user agents should be able to avoid presenting "garbage" to the user. Instead, they may either locate resources necessary for the correct presentation of the document or, if they cannot locate the resources, they should at least warn the user that the document will be unreadable and explain the cause.
+
+Since links may point to documents encoded with different character encodings, the A and LINK elements support the charset attribute. This attribute allows authors to advise user agents about the encoding of data at the other end of the link. The hreflang attribute provides user agents with information about the language of a resource at the end of a link, just as the lang attribute provides information about the language of an element's content or attribute values. Armed with this additional knowledge, user agents should be able to avoid presenting "garbage" to the user. Instead, they may either locate resources necessary for the correct presentation of the document or, if they cannot locate the resources, they should at least warn the user that the document will be unreadable and explain the cause.
+
+</p>
+
+
+</div>
+
+</aside>
+
+
+<section>
+
+<h1>3.1 Forward and reverse links</h1>
+
+The rel and rev attributes play complementary roles -- the rel attribute specifies a forward link and the rev attribute specifies a reverse link.
+Links to alternate versions of a document, written in another human language.
+Links to alternate versions of a document, designed for different media, for instance a version especially suited for printing.
+Consider two documents A and B.
+
+Both attributes may be specified simultaneously.
+<br><br>
+
+<strong>3.2 Links and external style sheets</strong>
+<br>
+When the LINK element links an external style sheet to a document, the type attribute specifies the style sheet language and the media attribute specifies the intended rendering medium or media. User agents may save time by retrieving from the network only those style sheets that apply to the current device.
+
+Media types are further discussed in the section on style sheets.
+
+
+<p>
+Authors may use the LINK element to provide a variety of information to search engines, including:
+
+Links to alternate versions of a document, written in another human language.
+Links to alternate versions of a document, designed for different media, for instance a version especially suited for printing.
+Links to the starting page of a collection of documents.
+The examples below illustrate how language information, media types, and link types may be combined to improve document handling by search engines.
+
+In the following example, we use the hreflang attribute to tell search engines where to find Dutch, Portuguese, and Arabic versions of a document. Note the use of the charset attribute for the Arabic manual. Note also the use of the lang attribute to indicate that the value of the title attribute for the LINK element designating the French manual is in French.
+
+
+
+When the LINK element links an external style sheet to a document, the type attribute specifies the style sheet language and the media attribute specifies the intended rendering medium or media. User agents may save time by retrieving from the network only those style sheets that apply to the current device.
+
+Media types are further discussed in the section on style sheets.
+
+<br><br>
+<strong>3.3 Links and search engines</strong>
+<br>
+
+Authors may use the LINK element to provide a variety of information to search engines, including:
+
+Links to alternate versions of a document, written in another human language.
+Links to alternate versions of a document, designed for different media, for instance a version especially suited for printing.
+Links to the starting page of a collection of documents.
+The examples below illustrate how language information, media types, and link types may be combined to improve document handling by search engines.
+
+In the following example, we use the hreflang attribute to tell search engines where to find Dutch, Portuguese, and Arabic versions of a document. Note the use of the charset attribute for the Arabic manual. Note also the use of the lang attribute to indicate that the value of the title attribute for the LINK element designating the French manual is in French.
+
+In the following example, we use the hreflang attribute to tell search engines where to find Dutch, Portuguese, and Arabic versions of a document. Note the use of the charset attribute for the Arabic manual. Note also the use of the lang attribute to indicate that the value of the title attribute for the LINK element designating the French manual is in French.
+
+
+
+</p>
+
+
+
+
+</section>
+
+
+
+
+<div class="footer1">
+    <p>HTML offers many of the conventional publishing idioms for rich text and structured documents, but what separates it from most other markup languages is its features for hypertext and interactive documents. This section introduces the link (or hyperlink, or Web link), the basic hypertext construct. A link is a connection from one Web resource to another. Although a simple concept, the link has been one of the primary forces driving the success of the Web.
+A link has two ends -- called anchors -- and a direction. The link starts at the "source" anchor and points to the "destination" anchor, which may be any Web resource (e.g., an image, a video clip, a sound bite, a program, an HTML document, an element within an HTML document, etc.). </p>
+    <!-- end .footer --></div>
+  <!-- end .container --></div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                          </body>
+
+                                        </html>
